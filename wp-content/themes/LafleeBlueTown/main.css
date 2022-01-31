@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: lighter;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*ここからヘッダー*/
+header{
+    position: relative;
+}
+
+.sp{
+    display: none;
+}
+
+
+
+header nav{
+    position: absolute;
+    top: 0;
+    margin-top: 16px;
+    margin-left: 22px;
+}
+
+header nav a{
+    
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+nav li{
+    margin-right: 20px;
+}
+
+header .intop{
+    display: block;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 16px;
+    margin-right: 22px;
+}
+
+.scroll{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+}
+
+.scroll::after{
+    content: "";
+    display: block;
+    background-color: white;
+    width: 1px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+/*ここからメイン*/
+h2{
+    text-align: center;
+}
+
+main::before,
+.lineup::before{
+    content: "";
+    display: block;
+    background-image: url(img_2/Noren.svg);
+    height: 90px;
+    width: 100%;
+    background-position: center;
+}
+
+.about{
+    padding-top: 260px;
+    padding-bottom: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+
+.about img{
+    width: 554px;
+    height: 312px;
+    margin-right: 50px;
+}
+
+.about div{
+    width: 570px;
+}
+
+.about p:nth-child(1){
+    font-size: 31px;
+    margin-bottom: 16px;
+}
+
+.about p:nth-child(2){
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.movie{
+    background-color: #0080FF;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.movie img{
+    width: 950px;
+    height: 535px;
+}
+
+.movie h2{
+    margin-bottom: 82px;
+    color: white;
+    font-weight: lighter;
+}
+
+.lineup{
+    padding-bottom: 100px;
+}
+
+.lineup h2{
+    margin-top:  150px;
+    margin-bottom: 150px;
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.lineup dl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 170px;
+}
+
+.lineup dl h3{
+    font-size: 29px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.lineup dt{
+    width: 420px;
+    margin-right: 140px;
+    line-height: 2;
+}
+
+.lineup dd{
+    width: 350px;
+}
+
+.lineup .black {
+    flex-direction: row-reverse;
+}
+
+.black dt{
+    margin-right: 0;
+    margin-left: 140px;
+}
+
+.insta{
+    background-color: #0080FF;
+    margin-bottom: 235px;
+}
+
+.insta h2{
+    margin-bottom: 5px;
+    color: white;
+    font-weight: lighter;
+}
+
+/*ここからフッター*/
+
+footer{
+    background-color:#0080FF;
+    color: white;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+footer nav ul{
+    justify-content: center;
+}
+
+footer nav li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer .copy{
+    text-align: center;
+}
+
+footer .intop{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform:translate(0,-50%);
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight :300;
+    margin-right: 70px;
+}
+
+footer .intop img{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+/*ここからスマホ*/
+
+@media screen and (max-width:780px){
+    .pc{
+        display: none;
+    }
+
+    .sp{
+        display: block;
+    }
+
+    header nav ul{
+        color: #000000;
+    }
+
+
+    .about,
+    .movie {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    main::before,
+    .lineup::before{
+        height: 45px;
+        background-size:auto 100%;
+        background-repeat:repeat-x;
+    }
+
+    main .about{
+        display: block;
+        width: 100%;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    main .about div,
+    main .about img{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .movie{
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .movie img{
+        width: 100%;
+        height: auto;
+    }
+
+    .movie h2,
+    .insta h2{
+        margin-bottom: 30px;
+    }
+
+    .lineup dl,
+    .lineup .black {
+        flex-direction:column-reverse ;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 80px;
+    }
+
+    .lineup dt{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .lineup dl h3 {
+        margin-bottom: 0;
+    }
+
+    .lineup h2 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .black dt{
+        margin-left: 0;
+    }
+
+    .insta{
+        display: none;
+    }
+
+    .lineup{
+        padding-bottom: 50px;
+    }
+
+    .lineup dd {
+        width: 100%;
+    }
+
+    footer ul li:last-child{
+        margin-right: 0;
+    }
+
+    footer .intop{
+        position: inherit;
+        margin: auto;
+        justify-content: center;
+        transform: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.youtube {
+    width: 100%;
+    max-width: 840px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .youtube iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+/*ここからInstagram*/
+  #sb_instagram .sb_instagram_header{
+      display: none ;
+  }
+
+  #sb_instagram #sbi_load{
+      display: none;
+  }
+
+  #sb_instagram #sbi_images{
+      width: 900px !important;
+      float: none !important;
+  }
+
+  #sb_instagram{
+      text-align: center;
+  }
+
+  .insta{
+      padding-top: 50px;
+      padding-bottom: 35px;
+  }

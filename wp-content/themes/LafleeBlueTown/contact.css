@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: lighter;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body::before{
+    content: "";
+    display: block;
+    background-image: url(img_2/Noren.svg);
+    height: 90px;
+    width: 100%;
+    background-position: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/*ここかヘッダー*/
+.logo{
+    width: 128px;
+    height: 72px;
+    margin-left: 15px;
+}
+
+header nav a{
+    color: #0080FF;
+    text-decoration: none;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: flex-end;
+}
+
+header li{
+    margin-right: 20px;
+}
+
+header ul img{
+    width: 33px;
+    height: 33px;
+}
+
+/*ここかメイン*/
+
+main{
+    width: 1150px;
+    margin: auto;
+}
+
+.bread{
+    display: flex;
+    color: #0080FF;
+    margin-top: 30px;
+    font-weight: 400;
+    margin-bottom: 40px;
+
+}
+
+.bread li::after{
+    content: "/";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bread li:last-child::after{
+    display: none;
+    
+}
+
+h1{
+    font-size: 37px;
+    border-bottom: 1px #707070 solid;
+    font-weight:300;
+}
+
+.info{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.mw_wp_form.mw_wp_form_input,
+.mw_wp_form.mw_wp_form_confirm.mw_wp_form_preview {
+
+    text-align: center;
+}
+
+form dt,
+form dd,
+form input,
+textarea{
+    width: 660px;
+    margin: auto;
+}
+
+form dt{
+    text-align: left;
+}
+
+input[type="submit"]{
+    width: 120px;
+    background-color: #0080FF;
+    border: none;
+    color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 18px;
+    margin-bottom: 500px;
+}
+
+form dd{
+    margin-bottom: 50px;
+}
+
+form input[type="text"],
+form input[type="email"]{
+    padding: 10px 0;
+}
+
+textarea{
+    height: 200px;
+}
+
+
+/*ここからフッター*/
+
+.aboutfoot{
+    background-color:#0080FF;
+    color: white;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+footer nav ul{
+    justify-content: center;
+    display: flex;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer nav li{
+    margin-right: 20px;
+}
+
+footer nav li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer .copy{
+    text-align: center;
+}
+
+footer .intop{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform:translate(0,-50%);
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight :300;
+    margin-right: 70px;
+}
+
+footer .intop img{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+/*ここからスマホ*/
+@media screen and (max-width:780px){
+    form dt,
+    form dd,
+    form input,
+    textarea{
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .bread{
+        display: none;
+    }
+
+    h1{
+        display: none;
+    }
+
+
+}

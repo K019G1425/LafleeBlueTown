@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: lighter;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body::before{
+    content: "";
+    display: block;
+    background-image: url(img_2/Noren.svg);
+    height: 90px;
+    width: 100%;
+    background-position: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/*ここかヘッダー*/
+.logo{
+    width: 128px;
+    height: 72px;
+    margin-left: 15px;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: flex-end;
+    color: #0080FF;
+}
+
+header li{
+    margin-right: 20px;
+}
+
+header ul img{
+    width: 33px;
+    height: 33px;
+}
+
+.bg,
+.button{
+    display: none;
+}
+
+/*ここからメイン*/
+
+main{
+    max-width: 1150px;
+    width: 90%;
+    margin: auto;
+}
+
+.bread{
+    display: flex;
+    color: #0080FF;
+    margin-top: 30px;
+    font-weight: 400;
+    margin-bottom: 40px;
+
+}
+
+.bread li::after{
+    content: "/";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bread li:last-child::after{
+    display: none;
+    
+}
+
+h1{
+    font-size: 37px;
+    border-bottom: 1px #707070 solid;
+    font-weight:300;
+
+}
+
+.about,
+.about2{
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+
+.about img,
+.about2 img{
+    width: 554px;
+    height: 312px;
+    margin-right: 50px;
+}
+
+.about p:nth-child(1){
+    font-size: 31px;
+    margin-bottom: 16px;
+}
+
+.about p:nth-child(2){
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+h2{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:lighter;
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    background-color: #707070;
+    width: 100px;
+    height: 1px;
+    margin-left: 25px;
+}
+
+
+
+
+
+/*ここからフッター*/
+
+.aboutfoot{
+    background-color:#0080FF;
+    color: white;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+footer nav ul{
+    justify-content: center;
+    display: flex;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer nav li{
+    margin-right: 20px;
+}
+
+footer nav li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer .copy{
+    text-align: center;
+}
+
+footer .intop{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform:translate(0,-50%);
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight :300;
+    margin-right: 70px;
+}
+
+footer .intop img{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width:780px){
+
+    body::before{
+        height: 45px;
+        background-size:auto 100%;
+        background-repeat:repeat-x;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .button{
+        display: block;
+        width: 32px;
+        height: 22px;
+        position: relative;
+        z-index: 101;
+        margin-right: 20px;
+        margin-left: auto;
+    }
+
+    .button a,
+    .button::before,
+    .button::after{
+        display: block;
+        background-color: #0080FF;
+        width: 32px;
+        height: 2px;
+        content: "";
+        position: absolute;
+    }
+
+    .button a{
+        top: 0;
+    }
+
+    .button::before{
+        transform: translate(0,-50%);
+        top: 50%;
+    }
+
+    .button::after{
+        bottom: 0%;
+    }
+
+    header nav{
+        width: 50vw;
+        height: 100vh;
+        display: none;
+        background-color: #484848;
+        position: absolute;
+        top: 0;
+        right: -50vw;
+        padding-top: 54px;
+        padding-left:20px ;
+        z-index: 100;
+        transition: right 0.3s;
+    }
+
+    header nav ul{
+        color: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 30px;
+    }
+
+    .bg{
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        pointer-events: none;
+    }
+    .bg.open{
+        opacity: 1;
+    }
+
+    /*ここからメイン*/
+    .bread{
+        display: none;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    .about,
+    .about2{
+        padding-bottom: 40px;
+    }
+    .about img,
+    .about2 img{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    h2{
+        font-size: 20px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    h2::after{
+        width: 30px;
+    }
+
+
+    footer ul li:last-child{
+        margin-right: 0;
+    }
+
+    footer .intop{
+        position: inherit;
+        margin: auto;
+        justify-content: center;
+        transform: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        padding-top: 50px;
+    }
+}
